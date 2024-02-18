@@ -85,22 +85,22 @@
                         </div>
                     </div>
                     <hr class="border-dashed">
-                    <div class="grid grid-cols-5 gap-5 py-5">
+                    <div class="grid grid-cols-5 gap-5 py-5" id="ticketGrid">
                         <span class="text-center ">A</span>
-                        <kbd class="kbd">A1</kbd>
-                        <kbd class="kbd">A2</kbd>
-                        <kbd class="kbd">A3</kbd>
-                        <kbd class="kbd">A4</kbd>
-                        <kbd class="text-center">B</kbd>
-                        <kbd class="kbd">B1</kbd>
-                        <kbd class="kbd">B2</kbd>
-                        <kbd class="kbd">B3</kbd>
-                        <kbd class="kbd">B4</kbd>
-                        <kbd class="text-center">C</kbd>
-                        <kbd class="kbd">C1</kbd>
-                        <kbd class="kbd">C2</kbd>
-                        <kbd class="kbd">C3</kbd>
-                        <kbd class="kbd">C4</kbd>
+                        <button id="A1" class="btn ticket">A1</button>
+                        <button id="A2" class="btn ticket">A2</button>
+                        <button id="A3" class="btn ticket">A3</button>
+                        <button id="A4" class="btn ticket">A4</button>
+                        <span class="text-center">B</span>
+                        <button id="B1" class="btn ticket">B1</button>
+                        <button id="B2" class="btn ticket">B2</button>
+                        <button id="B3" class="btn ticket">B3</button>
+                        <button id="B4" class="btn ticket">B4</button>
+                        <span class="text-center">C</span>
+                        <button id="C1" class="btn ticket">C1</button>
+                        <button id="C2" class="btn ticket">C2</button>
+                        <button id="C3" class="btn ticket">C3</button>
+                        <button id="C4" class="btn ticket">C4</button>
 
                     </div>
 
@@ -111,24 +111,18 @@
                     <p class="py-5 text-xl font-semibold">Select Your Seat</p>
                     <hr>
                     <div class=" bg-[#F7F8F8] shadow-xl p-[5%]">
-                        <table class="table table-zebra">
+                        <table class="table table-zebra" id="ticketTable">
                             <!-- head -->
                             <thead class=" text-base font-semibold">
                                 <tr>
 
-                                    <th>Seat <span class="bg-[#1DD100] px-1 rounded-md">0</span></th>
+                                    <th>Seat <span class="bg-[#1DD100] px-1 rounded-md" id="selectedItem">0</span></th>
                                     <th>Class</th>
                                     <th>Price</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- row 1 -->
-                                <tr>
-
-                                    <td>A1</td>
-                                    <td>Economoy</td>
-                                    <td>550</td>
-                                </tr>
+                               
 
                             </tbody>
                            
@@ -138,7 +132,7 @@
                                    
                                     <th>Total price</th>
                                     <th>:</th>
-                                    <th><span class="" id="total-price">0.00</span>TK</th>
+                                    <th><span class="" id="totalPrice">0.00</span></th>
                                     
                                 </tr>
                             </thead>
@@ -156,7 +150,7 @@
                                 disabled>Apply</button>
                         </div>
                        
-                         <h5 class="font-bold pl-5">Grand price     :         <span class=" ml-10" id="total-price"> 0.00 </span>TK
+                         <h5 class="font-bold pl-5">Grand price     :         <span class=" ml-10" id="grand-price"> 0.00 </span>
                         </h5>
                         <button class="btn bg-[#1DD100] w-full" onclick="my_modal_1.showModal()">Next</button>
                     
@@ -175,7 +169,7 @@
                                     <p>Shortly you will find a confirmation in your email. </p>
 
                                     <div class="card-actions">
-                                        <button class="btn  bg-[#20AE5C] text-white normal-case px-20 rounded-3xl">Continue</button>
+                                        <button class="btn  bg-[#20AE5C] text-white normal-case px-20 rounded-3xl" onclick="goHome()">Continue</button>
                                     </div>
                                 </div>
                             </div>
@@ -233,7 +227,7 @@
     </footer>
 
 
-
+<script src="./js/index.js"></script>
 </body>
 
 </html>
