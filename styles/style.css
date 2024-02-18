@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+}
+.paribahan{
+    box-sizing: border-box;
+    border-top: 2px solid #1DD100;
+    border-radius: 88px 88px 0px 0px;
+    background: #F7F8F8;
+   
+}
