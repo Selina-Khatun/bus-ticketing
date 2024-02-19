@@ -19,3 +19,6 @@
 .selected {
     background-color: green!important;
 }
+hr{
+  border-top: 2px dashed ;
+}

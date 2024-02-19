@@ -15,7 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
     <link href="path/to/your/custom.css" rel="stylesheet">
     <link href="path/to/tailwind.css" rel="stylesheet">
-
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/8acf9ee4cf.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="">
@@ -59,33 +60,93 @@
     </header>
     <main class="max-w-7xl mx-auto">
         <!-- P.H Paribahan section -->
-        <section class=" paribahan border-t-2  border-[#1DD100] rounded-t-3xl">
-            <div>
-                <div>
-                    <div class="text-center mt-[5%]">
-                        <h2 class="text-2xl font-bold font-inter">P.H Paribahan</h2>
-                        <p class="text-sm mt-4 text-[#03071299]">Yes, you can run unit tests and view the results
-                            directly within the app. The integrated <br>
-                            testing features allow for a streamlined .</p>
-                    </div>
-                </div>
+        <section class=" paribahan border-t-2 bg-[#F7F8F8] border-[#1DD100] pb-10 rounded-t-3xl">
 
+
+            <div class="text-center mt-[5%]">
+                <h2 class="text-2xl font-bold font-inter">P.H Paribahan</h2>
+                <p class="text-sm mt-4 text-[#03071299]">Yes, you can run unit tests and view the results
+                    directly within the app. The integrated <br>
+                    testing features allow for a streamlined .</p>
             </div>
-            <div class="flex max-w-5xl mx-auto justify-between  shadow-xl ">
+
+            <!-- Greenline Paribahan section  -->
+
+            <div class="max-w-6xl mx-auto flex  my-10 bg-white rounded-xl shadow-xl">
+                <div class="w-[75%] mx-auto p-5">
+                    <div class="flex justify-between mt-5">
+                        <div class="flex  justify-center  items-center">
+                            <div class="">
+                                <img class="w-10/12" src="./images/bus-logo.png" alt="">
+                            </div>
+                            <div>
+                                <h2 class="text-3xl pb-2 font-bold">Greenline Paribahan</h2>
+                                <p>Coach-009-WEB ! AC_Business</p>
+                            </div>
+                        </div>
+                        <button class="btn disabled:bg-[#1DD10026] " disabled>
+                            <i class="fa-solid fa-couch text-[#1DD100]"></i>
+
+                            40 Seats left
+                        </button>
+                    </div>
+
+                    <div class="bg-[#F7F8F8] text-center mt-5 p-8 rounded-xl">
+                        <div class="flex justify-between py-2">
+
+                            <p class="pl-1 font-bold">Route</p>
+                            <p class=" pl-1 font-bold">Dhaka - Sylhet</p>
+
+                        </div>
+                        <hr class="border-dashed border-1 border-gray-300 ">
+                        <div class="flex justify-between py-2">
+
+                            <p class="pl-1 font-bold">Departure Time</p>
+                            <p class=" pl-1 font-bold">9:00 PM</p>
+
+                        </div>
+                        <hr class="border-dashed border-1 border-gray-300 ">
+                        <div class="flex justify-between mt-3">
+                            <button class="btn disabled:bg-[#0307120D] disabled:text-[#030712CC]" disabled> Boarding
+                                Point - Laxmipur</button>
+                            <button class="btn disabled:bg-[#0307120D] disabled:text-[#030712CC]" disabled> Dropping
+                                Point - Bogura</button>
+                            <button class="btn disabled:bg-[#0307120D] disabled:text-[#030712CC]" disabled> Est. Time -
+                                11 Hour</button>
+                        </div>
+                    </div>
+
+                </div>
+                <img class="w-[5%]" src="./images/info-devider.png" alt="">
+                <div class="flex flex-col w-[25%] mx-auto justify-center items-center ">
+                    <img class="w-1/4 mb-5" src="./images/fare.png" alt="">
+                    <img src="./images/550 Taka Per Seat.png" alt="">
+                </div>
+            </div>
+
+            <!--Select  Seat  section starts from here-->
+
+            <div class="flex max-w-6xl mx-auto justify-between my-10 bg-white rounded-xl shadow-xl ">
                 <div class="w-[65%] p-5 mb-[5%] ">
                     <p class="py-5 text-xl font-semibold">Select Your Seat</p>
-                    <hr class="border-dashed ">
+                    <hr class="border-dashed border-1 border-gray-300 ">
+                    <!-- <div class="border-l-2 border-dashed border-gray-300 p-1 my-10 max-w-1"></div> -->
                     <div class="flex justify-between py-2">
                         <div class="flex"><img src="./images/seat-gray.png" alt="">
-                            <p class="pl-1">Available</p>
+                            <p class="pl-1 font-bold">Available</p>
                         </div>
                         <div class="flex">
                             <img src="./images/seat-green-filled.png" alt="">
-                            <p class="text-[#1DD100] pl-1">Selected</p>
+                            <p class="text-[#1DD100] pl-1 font-bold">Selected</p>
                         </div>
                     </div>
-                    <hr class="border-dashed">
+                    <hr class="border-dashed border-1 border-gray-300 ">
+                    <div class="flex justify-end mt-2">
+                        <img src="./images/Group 56.png" alt="">
+                    </div>
+
                     <div class="grid grid-cols-5 gap-5 py-5" id="ticketGrid">
+
                         <span class="text-center ">A</span>
                         <button id="A1" class="btn ticket">A1</button>
                         <button id="A2" class="btn ticket">A2</button>
@@ -106,11 +167,12 @@
 
                 </div>
                 <!-- <hr class="border-b border-gray-400"> -->
+                <!-- <img class="text-black" src="./images/cupon-devider.png" alt=""> -->
                 <div class="border-l-2 border-dashed border-gray-300 p-1 my-10 max-w-1"></div>
-                <div class="w-[33%]  mb-[5%]  ">
-                    <p class="py-5 text-xl font-semibold">Select Your Seat</p>
-                    <hr>
-                    <div class=" bg-[#F7F8F8] shadow-xl p-[5%]">
+                <div class="w-[30%]  mb-[5%] pr-5 ">
+                    <p class="pt-[15%] pb-4 text-xl font-semibold">Select Your Seat</p>
+                    <hr class="border-dashed border-1 border-gray-300 mb-5 ">
+                    <div class=" flex flex-col items-center justify-center bg-[#F7F8F8] shadow-xl p-[7%] rounded-xl">
                         <table class="table table-zebra" id="ticketTable">
                             <!-- head -->
                             <thead class=" text-base font-semibold">
@@ -121,63 +183,65 @@
                                     <th>Price</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                               
+                            <tbody class="border-none">
+
 
                             </tbody>
-                           
+
                             <!-- foot -->
-                            <thead class=" text-base font-semibold">
+                            <thead class="  font-bold">
                                 <tr>
-                                   
+
                                     <th>Total price</th>
                                     <th>:</th>
                                     <th><span class="" id="totalPrice">0.00</span></th>
-                                    
+
                                 </tr>
                             </thead>
-                            
+
 
                         </table>
-                        <!-- <h5>Total price: <span class=" ml-10" id="total-price">0.00</span>TK
-                        </h5> -->
+
                         <div class="join p-5 ">
 
-                            <input id="coupon-code" class="input input-bordered join-item w-2/3 "
-                                placeholder="Have any copupon?" />
+                            <input id="coupon-code" class="input  join-item w-full " placeholder="Have any copupon?" />
                             <button id="apply-button"
                                 class="btn disabled:bg-[#84f074] bg-[#1DD100]  text-white normal-case join-item rounded-r-md "
                                 disabled>Apply</button>
                         </div>
-                       
-                         <h5 class="font-bold pl-5">Grand Total     :         <span class=" ml-10" id="grandTotal"> 0.00 </span>
+
+                        <h5 class="font-bold text-start ">Grand Total : <span class=" ml-10" id="grandTotal"> 0.00
+                            </span>
                         </h5>
-                        <button class="btn disabled:bg-[#7df56a] bg-[#1DD100] w-full" onclick="my_modal_1.showModal()" id="nextButton" disabled>Next</button>
-                    
+                        <button class="btn disabled:bg-[#7df56a] bg-[#1DD100] w-11/12 text-center mt-3"
+                            onclick="my_modal_1.showModal()" id="nextButton" disabled>Next</button>
+                        <!-- modal section starts from here -->
 
-                    <dialog id="my_modal_1" class="modal">
-                        <form method="dialog" class="modal-box">
-                            <div class="card">
-                                <figure class="px-10 pt-10">
-                                    <img src="./images/success.png" alt="success" class="rounded-xl" />
-                                </figure>
-                                <div class="card-body items-center text-center">
-                                    <h2 class="card-title  text-3xl uppercase font-bold text-[#20AE5C]">success</h2>
-                                    <p class="card-title text-base  font-semibold">Thank you for Booking Our Bus Seats. 
+                        <dialog id="my_modal_1" class="modal">
+                            <form method="dialog" class="modal-box">
+                                <div class="card">
+                                    <figure class="px-10 pt-10">
+                                        <img src="./images/success.png" alt="success" class="rounded-xl" />
+                                    </figure>
+                                    <div class="card-body items-center text-center">
+                                        <h2 class="card-title  text-3xl uppercase font-bold text-[#20AE5C]">success</h2>
+                                        <p class="card-title text-base  font-semibold">Thank you for Booking Our Bus
+                                            Seats.
 
-                                        We are working hard to find the best service and deals for you. </p>
-                                    <p>Shortly you will find a confirmation in your email. </p>
+                                            We are working hard to find the best service and deals for you. </p>
+                                        <p>Shortly you will find a confirmation in your email. </p>
 
-                                    <div class="card-actions">
-                                        <button class="btn  bg-[#20AE5C] text-white normal-case px-20 rounded-3xl" onclick="Continue()">Continue</button>
+                                        <div class="card-actions">
+                                            <button class="btn  bg-[#20AE5C] text-white normal-case px-20 rounded-3xl"
+                                                onclick="Continue()">Continue</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-action">
+                                <div class="modal-action">
 
-                            </div>
-                        </form>
-                    </dialog>
+                                </div>
+                            </form>
+                        </dialog>
                     </div>
                 </div>
             </div>
@@ -185,7 +249,7 @@
 
     </main>
 
-    <!-- footer  -->
+    <!-- footer section starts from here -->
 
     <footer class=" text-white p-[5%] bg-black">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
@@ -227,7 +291,7 @@
     </footer>
 
 
-<script src="./js/index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
