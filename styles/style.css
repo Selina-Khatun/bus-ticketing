@@ -22,3 +22,8 @@
 hr{
   border-top: 2px dashed ;
 }
+.banner{
+  border-radius: 32px;
+background: linear-gradient(180.00deg, rgba(38, 50, 79, 0.5),rgba(3, 7, 18, 0) 100%),url('../images/banner.png');
+background-size: contain;
+}
