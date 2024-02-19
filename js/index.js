@@ -3,7 +3,7 @@ const totalPriceDisplay = document.getElementById("totalPrice");
 const totalTicketsDisplay = document
   .getElementById("selectedItem")
   .querySelector("span");
-  const grandTotalDisplay = document.getElementById("grandTotal");
+const grandTotalDisplay = document.getElementById("grandTotal");
 const couponCodeInput = document.getElementById("coupon-code");
 const applyButton = document.getElementById("apply-button");
 
@@ -31,13 +31,14 @@ ticketButtons.forEach((button) => {
 function updateTable() {
   const tbody = document.querySelector("#ticketTable tbody ");
   const thead = document.getElementById("selectedItem");
+  const remainingSeats = document.getElementById("remaining-seats");
+
   tbody.innerHTML = "";
   thead.innerText = selectedTickets.length;
-
+  remainingSeats.innerText = 12 - selectedTickets.length;
   const nextButton = document.getElementById("nextButton");
   nextButton.disabled = selectedTickets.length < 1;
 
- 
   selectedTickets.forEach((ticket) => {
     const tr = document.createElement("tr");
     const tdTicket = document.createElement("td");
@@ -55,45 +56,41 @@ function updateTable() {
     tbody.appendChild(tr);
   });
 
-   const totalAmount = selectedTickets.length * 550; 
+  const totalAmount = selectedTickets.length * 550;
   totalPriceDisplay.textContent = "BDT " + totalAmount.toFixed(2);
 
-// apply button calculation starts from here
+  // apply button calculation starts from here
 
-applyButton.disabled = selectedTickets.length < 4;
+  applyButton.disabled = selectedTickets.length < 4;
 
-applyButton.addEventListener("click", function () {
-  if (!applyButton.disabled && couponCodeInput.value === "NEW15") {
-    const discount = 0.15;
-    let totalAmount=selectedTickets.length * 550;
-    console.log(totalAmount)
-    let discountedTotal = totalAmount * discount;
-    console.log('discountedTotal', discountedTotal);
-    let total = totalAmount - discountedTotal;
-    console.log('total',total)
-    grandTotalDisplay.textContent = "BDT " + total.toFixed(2);
-    couponCodeInput.value = ""; 
-}
-    else if(!applyButton.disabled && couponCodeInput.value === "Couple 20"){
-      const discount = 0.20;
-      let totalAmount=selectedTickets.length * 550;
-      console.log(totalAmount)
+  applyButton.addEventListener("click", function () {
+    if (!applyButton.disabled && couponCodeInput.value === "NEW15") {
+      const discount = 0.15;
+      let totalAmount = selectedTickets.length * 550;
+      console.log(totalAmount);
       let discountedTotal = totalAmount * discount;
-      console.log('discountedTotal', discountedTotal);
+      console.log("discountedTotal", discountedTotal);
       let total = totalAmount - discountedTotal;
-      console.log('total',total)
+      console.log("total", total);
       grandTotalDisplay.textContent = "BDT " + total.toFixed(2);
-      couponCodeInput.value = "";  
+      couponCodeInput.value = "";
+    } else if (!applyButton.disabled && couponCodeInput.value === "Couple 20") {
+      const discount = 0.2;
+      let totalAmount = selectedTickets.length * 550;
+      console.log(totalAmount);
+      let discountedTotal = totalAmount * discount;
+      console.log("discountedTotal", discountedTotal);
+      let total = totalAmount - discountedTotal;
+      console.log("total", total);
+      grandTotalDisplay.textContent = "BDT " + total.toFixed(2);
+      couponCodeInput.value = "";
     }
-  
-});
+  });
 
-grandTotalDisplay.textContent = "BDT " + totalAmount.toFixed(2);
+  grandTotalDisplay.textContent = "BDT " + totalAmount.toFixed(2);
 }
 function Continue() {
+  window.Location.href = "http://127.0.0.1:5500/index.html";
 
-    window.Location.href = "http://127.0.0.1:5500/index.html";
-
-    window.location.reload()
-
+  window.location.reload();
 }

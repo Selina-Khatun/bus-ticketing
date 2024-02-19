@@ -20,7 +20,7 @@
 </head>
 
 <body class="">
-    <header class="max-w-7xl mx-auto">
+    <header class="max-w-6xl py-4 mx-auto">
         <!-- navbar -->
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -52,8 +52,8 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <button class="btn btn-outline btn-accent">Bus
-
+                <button class="btn bg-[#1DD10026] border-1 border-[#1DD100] font-bold text-lg px-5  text-[#1DD100] " > 
+                    Bus<i class="fa-solid fa-van-shuttle text-[#1DD100]"></i>
                 </button>
             </div>
         </div>
@@ -84,10 +84,10 @@
                                 <p>Coach-009-WEB ! AC_Business</p>
                             </div>
                         </div>
-                        <button class="btn disabled:bg-[#1DD10026] " disabled>
+                        <button class="btn disabled:bg-[#1DD10026] " disabled >
                             <i class="fa-solid fa-couch text-[#1DD100]"></i>
 
-                            40 Seats left
+                            <span id="remaining-seats">12 </span> Seats left
                         </button>
                     </div>
 
@@ -173,6 +173,9 @@
                     <p class="pt-[15%] pb-4 text-xl font-semibold">Select Your Seat</p>
                     <hr class="border-dashed border-1 border-gray-300 mb-5 ">
                     <div class=" flex flex-col items-center justify-center bg-[#F7F8F8] shadow-xl p-[7%] rounded-xl">
+
+                        <!-- table starts  -->
+
                         <table class="table table-zebra" id="ticketTable">
                             <!-- head -->
                             <thead class=" text-base font-semibold">
@@ -201,6 +204,7 @@
 
 
                         </table>
+                        <!-- table section end  -->
 
                         <div class="join p-5 ">
 
