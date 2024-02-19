@@ -74,7 +74,8 @@ function updateTable() {
       console.log("total", total);
       grandTotalDisplay.textContent = "BDT " + total.toFixed(2);
       couponCodeInput.value = "";
-    } else if (!applyButton.disabled && couponCodeInput.value === "Couple 20") {
+    } 
+     if (!applyButton.disabled && couponCodeInput.value === "Couple 20") {
       const discount = 0.2;
       let totalAmount = selectedTickets.length * 550;
       console.log(totalAmount);
